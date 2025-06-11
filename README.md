@@ -1,2 +1,4 @@
-# development
-the code deployement to create the code write now
+# Development
+
+This repository is used for code development and deployment.  
+We are currently setting up and writing the initial project code.
