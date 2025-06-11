@@ -14,8 +14,9 @@ namespace Employee.Controllers
             string Employee=string.Empty;
             try
             {
-                Employee = "the way how to bild the projectghjgh";
                 int j=25;
+                Employee = "the way how to bild the projectghjgh";
+
             }
             catch(Exception e)
             {
@@ -31,7 +32,7 @@ namespace Employee.Controllers
             string Employee = string.Empty;
             try
             {
-                Employee = "Iam Check Branch Pullinh Requst";
+                Employee = "Iam Check Branch Pullinh Requsted";
                 int i=123;
             }
             catch (Exception e)
