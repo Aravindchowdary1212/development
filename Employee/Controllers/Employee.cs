@@ -11,15 +11,32 @@ namespace Employee.Controllers
         [HttpGet ,Route("employee")]
         public IActionResult Employes()
         {
+            string Employee=string.Empty;
             try
             {
-                string Employee = "";
+                Employee = "the way how to bild the project";
             }
             catch(Exception e)
             {
                 return BadRequest(e.Message);
             }
-            return Ok("nbggfgg");
+            return Ok(Employee);
+        }
+
+
+        [HttpGet, Route("employee1")]
+        public IActionResult Employes1()
+        {
+            string Employee = string.Empty;
+            try
+            {
+                Employee = "Iam Check Branch Pullinh Requst";
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+            return Ok(Employee);
         }
     }
 }
