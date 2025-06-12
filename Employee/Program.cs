@@ -1,4 +1,7 @@
 
+using InterfaceEmployee;
+using Employes;
+
 namespace Employee
 {
     public class Program
@@ -13,6 +16,10 @@ namespace Employee
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddScoped<IEmployes, Employe>();
+            builder.Services.AddScoped<IEmployesDao, EmployesDao>();
+
+
 
             var app = builder.Build();
 
