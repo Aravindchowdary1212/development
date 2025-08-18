@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DatabaseConnection\DatabaseConnection.csproj" />
     <ProjectReference Include="..\Employes\Employes.csproj" />
     <ProjectReference Include="..\InterfaceEmployee\InterfaceEmployee.csproj" />
   </ItemGroup>
