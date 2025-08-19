@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceEmployee", "..\Int
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employes", "..\Employes\Employes.csproj", "{FC868C2C-9F5E-4DCF-8E3E-C4D7C7227274}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseConnection", "..\DatabaseConnection\DatabaseConnection.csproj", "{FAA9A348-EFF9-4301-898B-E1A1391187DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FC868C2C-9F5E-4DCF-8E3E-C4D7C7227274}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC868C2C-9F5E-4DCF-8E3E-C4D7C7227274}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC868C2C-9F5E-4DCF-8E3E-C4D7C7227274}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAA9A348-EFF9-4301-898B-E1A1391187DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAA9A348-EFF9-4301-898B-E1A1391187DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAA9A348-EFF9-4301-898B-E1A1391187DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAA9A348-EFF9-4301-898B-E1A1391187DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
