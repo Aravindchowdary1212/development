@@ -19,7 +19,7 @@ using System.Reflection;
 using System.IO;
 using Newtonsoft.Json.Linq;
 
-namespace AccuConnect.Core
+namespace Employee.Core
 {
     public static class DataContactObject
     {
@@ -60,7 +60,7 @@ namespace AccuConnect.Core
             }
             return _ProcedureName;
         }
-        public static DataSet FillDataset(AccuConnectDbContext acdbContext, string QueryKeyName, List<QuerryParamsDto> QuerryParams, string Querry = "")
+        public static DataSet FillDataset(ConnectDbContext acdbContext, string QueryKeyName, List<QuerryParamsDto> QuerryParams, string Querry = "")
         {
             _log.Info("FillDataset::" + "QueryKeyName::" + QueryKeyName + "::Begin");
 
@@ -96,7 +96,7 @@ namespace AccuConnect.Core
             return ds;
 
         }
-        public static int ExecuteNonQuerry(AccuConnectDbContext acdbContext, string QueryKeyName, List<QuerryParamsDto> QuerryParams, string Querry = "")
+        public static int ExecuteNonQuerry(ConnectDbContext acdbContext, string QueryKeyName, List<QuerryParamsDto> QuerryParams, string Querry = "")
         {
             _log.Info("ExecuteNonQuerry::" + "QuerryKyeName::" + QueryKeyName + "::Begin");
             int i = 0;
@@ -130,7 +130,7 @@ namespace AccuConnect.Core
             _log.Info("ExecuteNonQuerry::" + "QueryKyeName::" + QueryKeyName + "::End");
             return i;
         }
-        public static object ExecuteScalar(AccuConnectDbContext acdbContext, string QueryKeyName, List<QuerryParamsDto> QuerryParams, string Querry = "")
+        public static object ExecuteScalar(ConnectDbContext acdbContext, string QueryKeyName, List<QuerryParamsDto> QuerryParams, string Querry = "")
         {
             _log.Info("ExecuteScalar::" + "QueryKeyName::" + QueryKeyName + "::Begin");
             object obj = null;
@@ -165,7 +165,7 @@ namespace AccuConnect.Core
             _log.Info("ExecuteScalar::" + "QueryKeyName::" + QueryKeyName + "::End");
             return obj;
         }
-        public static IDataReader ExecuteReader(AccuConnectDbContext acdbContext, string QueryKeyName, List<QuerryParamsDto> QuerryParams, string Querry = "")
+        public static IDataReader ExecuteReader(ConnectDbContext acdbContext, string QueryKeyName, List<QuerryParamsDto> QuerryParams, string Querry = "")
         {
             _log.Info("ExecuteReader::" + "QueryKeyName::" + QueryKeyName + "::Begin");
             IDataReader obj = null;
@@ -235,7 +235,7 @@ namespace AccuConnect.Core
     {
         private static readonly log4net.ILog _log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         public static string _ConnectionString = string.Empty;
-        public static DataSet FillDataset(AccuConnectDbContext acdbContext, QuerryType.QuerryTypes types, string Procedure, List<QuerryParamsDto> QuerryParams)
+        public static DataSet FillDataset(ConnectDbContext acdbContext, QuerryType.QuerryTypes types, string Procedure, List<QuerryParamsDto> QuerryParams)
         {
             _log.Info("FillDataset::" + "Procedure::" + Procedure + "::Begin");
             _ConnectionString = acdbContext.Database.GetConnectionString().ToString();
@@ -292,7 +292,7 @@ namespace AccuConnect.Core
             _log.Info("FillDataset::" + "Procedure::" + Procedure + "::End");
             return ds;
         }
-        public static int ExecuteNonQuerry(AccuConnectDbContext acdbContext, QuerryType.QuerryTypes types, string Procedure, List<QuerryParamsDto> QuerryParams)
+        public static int ExecuteNonQuerry(ConnectDbContext acdbContext, QuerryType.QuerryTypes types, string Procedure, List<QuerryParamsDto> QuerryParams)
         {
             _log.Info("ExecuteNonQuerry::" + "Procedure::" + Procedure + "::Begin");
             _ConnectionString = acdbContext.Database.GetConnectionString().ToString();
@@ -347,7 +347,7 @@ namespace AccuConnect.Core
             _log.Info("ExecuteNonQuerry::" + "Procedure::" + Procedure + "::End");
             return i;
         }
-        public static object ExecuteScalar(AccuConnectDbContext acdbContext, QuerryType.QuerryTypes types, string Procedure, List<QuerryParamsDto> QuerryParams)
+        public static object ExecuteScalar(ConnectDbContext acdbContext, QuerryType.QuerryTypes types, string Procedure, List<QuerryParamsDto> QuerryParams)
         {
             _log.Info("ExecuteScalar::" + "Procedure::" + Procedure + "::Begin");
             _ConnectionString = acdbContext.Database.GetConnectionString().ToString();
@@ -402,7 +402,7 @@ namespace AccuConnect.Core
             _log.Info("ExecuteScalar::" + "Procedure::" + Procedure + "::End");
             return obj;
         }
-        public static IDataReader ExecuteReader(AccuConnectDbContext acdbContext, QuerryType.QuerryTypes types, string Procedure, List<QuerryParamsDto> QuerryParams)
+        public static IDataReader ExecuteReader(ConnectDbContext acdbContext, QuerryType.QuerryTypes types, string Procedure, List<QuerryParamsDto> QuerryParams)
         {
             _log.Info("ExecuteScalar::" + "Procedure::" + Procedure + "::Begin");
             _ConnectionString = acdbContext.Database.GetConnectionString().ToString();
@@ -462,7 +462,7 @@ namespace AccuConnect.Core
     {
         private static readonly log4net.ILog _log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         public static string _ConnectionString = string.Empty;
-        public static DataSet FillDataset(AccuConnectDbContext acdbContext, QuerryType.QuerryTypes types, string Procedure, List<QuerryParamsDto> QuerryParams)
+        public static DataSet FillDataset(ConnectDbContext acdbContext, QuerryType.QuerryTypes types, string Procedure, List<QuerryParamsDto> QuerryParams)
         {
             _log.Info("FillDataset::" + "Procedure::" + Procedure + "::Begin");
             _ConnectionString = acdbContext.Database.GetConnectionString().ToString();
@@ -539,7 +539,7 @@ namespace AccuConnect.Core
             _log.Info("FillDataset::" + "Procedure::" + Procedure + "::End");
             return ds;
         }
-        public static int ExecuteNonQuerry(AccuConnectDbContext acdbContext, QuerryType.QuerryTypes types, string Procedure, List<QuerryParamsDto> QuerryParams)
+        public static int ExecuteNonQuerry(ConnectDbContext acdbContext, QuerryType.QuerryTypes types, string Procedure, List<QuerryParamsDto> QuerryParams)
         {
             _log.Info("ExecuteNonQuerry::" + "Procedure::" + Procedure + "::Begin");
             _ConnectionString = acdbContext.Database.GetConnectionString().ToString();
@@ -614,7 +614,7 @@ namespace AccuConnect.Core
             _log.Info("ExecuteNonQuerry::" + "Procedure::" + Procedure + "::End");
             return i;
         }
-        public static object ExecuteScalar(AccuConnectDbContext acdbContext, QuerryType.QuerryTypes types, string Procedure, List<QuerryParamsDto> QuerryParams)
+        public static object ExecuteScalar(ConnectDbContext acdbContext, QuerryType.QuerryTypes types, string Procedure, List<QuerryParamsDto> QuerryParams)
         {
             _log.Info("ExecuteScalar::" + "Procedure::" + Procedure + "::Begin");
             _ConnectionString = acdbContext.Database.GetConnectionString().ToString();
@@ -689,7 +689,7 @@ namespace AccuConnect.Core
             _log.Info("ExecuteScalar::" + "Procedure::" + Procedure + "::End");
             return obj;
         }
-        public static IDataReader ExecuteReader(AccuConnectDbContext acdbContext, QuerryType.QuerryTypes types, string Procedure, List<QuerryParamsDto> QuerryParams)
+        public static IDataReader ExecuteReader(ConnectDbContext acdbContext, QuerryType.QuerryTypes types, string Procedure, List<QuerryParamsDto> QuerryParams)
         {
             _log.Info("ExecuteScalar::" + "Procedure::" + Procedure + "::Begin");
             _ConnectionString = acdbContext.Database.GetConnectionString().ToString();
