@@ -9,23 +9,23 @@ using System.Data;
 using System.Text;
 
 #nullable disable
-namespace AccuConnect.Core
+namespace Employee.Core
 {
-    public class AccuConnectDbContext : DbContext
+    public class ConnectDbContext : DbContext
     {
         private IDbConnection DbConnection { get; }
-        public AccuConnectDbContext() { }
-        public AccuConnectDbContext(DbContextOptions<AccuConnectDbContext> options) : base(options)
+        public ConnectDbContext() { }
+        public ConnectDbContext(DbContextOptions<ConnectDbContext> options) : base(options)
         {
         }
       
-        public AccuConnectDbContext GetDBContext(string connectionString)
+        public ConnectDbContext GetDBContext(string connectionString)
         {
             if (!string.IsNullOrEmpty(connectionString))
             {
-                var optionsBuilder = new DbContextOptionsBuilder<AccuConnectDbContext>();
+                var optionsBuilder = new DbContextOptionsBuilder<ConnectDbContext>();
                 optionsBuilder.UseSqlServer(connectionString);
-                return new AccuConnectDbContext(optionsBuilder.Options);
+                return new ConnectDbContext(optionsBuilder.Options);
             }
             else
             {
