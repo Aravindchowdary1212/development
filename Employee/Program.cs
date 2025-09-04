@@ -1,6 +1,8 @@
 
-using InterfaceEmployee;
+using Employee.Core;
 using Employes;
+using InterfaceEmployee;
+using Microsoft.EntityFrameworkCore;
 
 namespace Employee
 {
@@ -9,6 +11,26 @@ namespace Employee
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+
+            DataContactObject.GetQuerryResource();
+            if (DataContactObject.intDatabaseTypeId == 0)
+            {
+                builder.Services.AddDbContext<ConnectDbContext>(options =>
+                {
+                    options.UseSqlServer(builder.Configuration.GetConnectionString("MSSQL"),
+                    sqlServerOptions => sqlServerOptions.CommandTimeout(300));
+                });
+            }
+            else if (DataContactObject.intDatabaseTypeId == 1)
+            {
+
+                builder.Services.AddDbContext<ConnectDbContext>(options =>
+                {
+                    options.UseNpgsql(builder.Configuration.GetConnectionString("Postgresql"),
+                    sqlServerOptions => sqlServerOptions.CommandTimeout(300));
+                });
+            }
 
             // Add services to the container.
 
