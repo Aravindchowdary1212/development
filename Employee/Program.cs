@@ -56,6 +56,7 @@ namespace Employee
 
             app.UseAuthorization();
 
+            app.UseStaticFiles();
 
             app.MapControllers();
 
